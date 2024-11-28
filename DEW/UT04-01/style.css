@@ -1,0 +1,130 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2em;
+}
+
+form {
+    margin: 2.5em auto;
+    max-width: 56.25em;
+    padding: 2em;
+}
+
+fieldset {
+    margin-bottom: 3em;
+    padding: 3em;
+    border-radius: 2em;
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 0.5em;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.5em;
+    margin-bottom: 1.25em;
+    margin-top: 0.3em;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+textarea {
+    resize: none;
+    height: 7.5em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    vertical-align: middle;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+fieldset label[for="userdata_showpassword"],
+fieldset label[for="accounttype_particular"],
+fieldset label[for="accounttype_empresa"],
+fieldset label[for="musica"],
+fieldset label[for="manualidades"],
+fieldset label[for="deporte"],
+fieldset label[for="artes"],
+fieldset label[for="videojuegos"],
+fieldset label[for="lectura"] {
+    display: inline-block;
+    margin-right: 0.8em;
+    cursor: pointer;
+}
+
+.field-group {
+    margin: 0.5em 0 1.25em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Posicionamiento de los spans de conteo */
+.postdata-container {
+    position: relative;
+    margin-bottom: 2em;
+}
+#postdata-count_title, #postdata-count_description {
+    font-size: 0.8em;
+    color: #666;
+    position: absolute;
+    right: 0.625em;
+    bottom: 0;
+}
+
+/* Botón enviar */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 1em;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Validaciones de input */
+input:required:valid {
+    border-color: #008000;
+}
+input:focus:invalid {
+    border-color: #ff0000;
+}
+
+/* Volver a la página de inicio */
+a {
+    color: #000000;
+    padding: 0.875em 1.25em;
+    margin: 0.5em 0;
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    color: #3e6291;
+}
