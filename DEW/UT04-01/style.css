@@ -40,7 +40,6 @@ textarea {
     margin-bottom: 1.25em;
     margin-top: 0.3em;
     box-sizing: border-box;
-    background-color: #f9f9f9;
 }
 
 textarea {
@@ -128,3 +127,13 @@ a {
 a:hover {
     color: #3e6291;
 }
+
+.errormessage {
+    margin: -1em 0 1.2em;
+    display: block;
+    font-size: 0.8em;
+    color: #ff0000;
+    right: 0.625em;
+    bottom: 0;
+}
+

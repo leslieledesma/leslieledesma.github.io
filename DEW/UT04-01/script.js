@@ -6,7 +6,9 @@ const DOM = {
     title: document.getElementById("postdata_title"),
     description: document.getElementById("postdata_description"),
     titleCount: document.getElementById("postdata-count_title"),
-    descriptionCount: document.getElementById("postdata-count_description")
+    descriptionCount: document.getElementById("postdata-count_description"),
+    form: document.getElementById("form"),
+    username: document.getElementById("userdata_username"),
 }
 
 // Mostrar contraseña
@@ -29,6 +31,16 @@ DOM.description.addEventListener("input", (e) => {
     DOM.descriptionCount.textContent = `${e.target.value.length}/120`; 
 })
 
+DOM.form.addEventListener("submit", (e) => {
+    if (!DOM.username.validationMessage == ""){
+        e.preventDefault();
+        let span = document.createElement("span");
+        span.textContent = DOM.username.validationMessage;
+        span.classList.toggle("errormessage");
+        
+        DOM.username.after(span);
+    }
+})
 
 
 
