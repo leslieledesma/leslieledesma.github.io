@@ -10,35 +10,35 @@
 <body>
     <h1>Formulario</h1>
     <form action="https://www.w3schools.com/action_page.php" method="post" id="form" novalidate>
-        <fieldset>
+        <fieldset class="userdata">
             <legend>Datos Usuario</legend>
             <label for="userdata_username">Nombre de usuario</label>
-            <input type="text" name="username" id="userdata_username" placeholder="Nombre de usuario" required>
+            <input type="text" name="NombreUsuario" id="userdata_username" placeholder="Nombre de usuario" required>
             <label for="userdata_password">Contraseña</label>
-            <input type="password" name="password" id="userdata_password" placeholder="Contraseña" required>
+            <input type="password" name="Contrasena" id="userdata_password" placeholder="Contraseña" required>
             <input type="checkbox" name="showpassword" id="userdata_showpassword">
             <label for="userdata_showpassword">Mostrar contraseña</label>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="personaldata">
             <legend>Datos Personales</legend>
             <label for="personaldata_name">Nombre</label>
-            <input type="text" name="name" id="personaldata_name" placeholder="Nombre" required>
+            <input type="text" name="Nombre" id="personaldata_name" placeholder="Nombre" required>
             <label for="personaldata_surname">Apellidos</label>
-            <input type="text" name="surname" id="personaldata_surname" placeholder="Apellidos" required>
+            <input type="text" name="Apellidos" id="personaldata_surname" placeholder="Apellidos" required>
             <label for="personaldata_telephone">Teléfono</label>
-            <input type="tel" name="telephone" id="personaldata_telephone" placeholder="Ej: (+34)922123123" required>
+            <input type="tel" name="Telefono" id="personaldata_telephone" placeholder="Ej: (+34)922123123" required>
             <label for="personaldata_cp">Código Postal</label>
-            <input type="number" name="cp" id="personaldata_cp" placeholder="38XXX" required>
+            <input type="number" name="CodigoPostal" id="personaldata_cp" placeholder="38XXX" required>
             <label for="personaldata-select_dninie">DNI/NIE</label>
-            <select name="DNINIE" id="personaldata-select_dninie" required>
+            <select name="TipoDocumento" id="personaldata-select_dninie" required>
                 <option value="" disabled selected>---</option>
                 <option value="DNI">DNI</option>
                 <option value="NIE">NIE</option>
             </select>
-            <input name="DNINIE" type="text" placeholder="DNI / NIE" id="personaldata-input_dninie" disabled required>
+            <input name="DniNie" type="text" placeholder="DNI / NIE" id="personaldata-input_dninie" disabled required>
             <label for="personaldata_birthyear">Año de nacimiento</label>
-            <select name="birthyear" id="personaldata_birthyear" required>
+            <select name="AnioNacimiento" id="personaldata_birthyear" required>
                 <option value="" disabled selected>Selecciona un año</option>
                 <option value="1980">1980</option>
                 <option value="1981">1981</option>
@@ -88,50 +88,51 @@
             </select>
             <span>Crear cuenta como:</span>
             <div class="field-group">
-                <input type="radio" name="accounttype" value="particular" id="accounttype_particular" required>
+                <input type="radio" name="CuentaComo" value="particular" id="accounttype_particular" required>
                 <label for="accounttype_particular">Particular</label>
-                <input type="radio" name="accounttype" value="empresa" id="accounttype_empresa" required>
+                <input type="radio" name="CuentaComo" value="empresa" id="accounttype_empresa" required>
                 <label for="accounttype_empresa">Empresa</label>
             </div>
             <span>Elige tus aficiones:</span>            
-            <div class="field-group">
+            <div class="field-group aficiones">
                 <div>
-                    <input type="checkbox" name="musica" id="musica" value="on">
+                    <input type="checkbox" value="MU" id="musica">
                     <label for="musica">Música</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="manualidades" id="manualidades" value="on">
+                    <input type="checkbox" value="MA" id="manualidades">
                     <label for="manualidades">Manualidades</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="deporte" id="deporte" value="on">
+                    <input type="checkbox" value="DE" id="deporte">
                     <label for="deporte">Deporte</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="artes" id="artes" value="on">
+                    <input type="checkbox" value="AR" id="artes">
                     <label for="artes">Artes</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="videojuegos" id="videojuegos" value="on">
+                    <input type="checkbox" value="VI" id="videojuegos">
                     <label for="videojuegos">Videojuegos</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="lectura" id="lectura" value="on">
+                    <input type="checkbox" value="LE" id="lectura">
                     <label for="lectura">Lectura</label>
                 </div>
+                <input type="text" id="hobbies" name="aficiones" hidden required>
             </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="postdata">
             <legend>Datos Publicación</legend>
             <div class="postdata-container">
                 <label for="postdata_title">Título</label>
-                <input type="text" name="title" maxlength="15" id="postdata_title" placeholder="Título" required>
+                <input type="text" name="PublicacionTitulo" maxlength="15" id="postdata_title" placeholder="Título" required>
                 <span id="postdata-count_title">0/15</span>
             </div>
             <div class="postdata-container">
                 <label for="postdata_description">Descripción</label>
-                <textarea name="description" id="postdata_description" maxlength="120" required></textarea>
+                <textarea name="PublicacionDescripcion" id="postdata_description" maxlength="120" required></textarea>
                 <span id="postdata-count_description">0/120</span>
             </div>
         </fieldset>
