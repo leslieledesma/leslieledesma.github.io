@@ -1,7 +1,10 @@
 body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-width: 560px;
 }
 
 h1 {
@@ -138,3 +141,43 @@ a:hover {
     border-color: #ff0000;
 }
 
+
+@media screen and (min-width: 900px) {
+    form fieldset.userdata {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+
+    form fieldset.personaldata  {
+        .personaldata-div_input {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .personaldata-div_doctype {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            div.field-group {
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+            }
+        }
+        .personaldata-div_hobbies {
+            div {
+                justify-content: left;
+                gap: 1em;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                flex-direction: column;
+            }
+        }
+ 
+    }
+}

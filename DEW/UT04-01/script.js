@@ -8,7 +8,7 @@ const DOM = {
     titleCount: document.getElementById("postdata-count_title"),
     descriptionCount: document.getElementById("postdata-count_description"),
     form: document.getElementById("form"),
-    username: document.getElementById("userdata_username"),
+    username: document.getElementById("userdata_username")
 }
 
 // Mostrar contraseña
