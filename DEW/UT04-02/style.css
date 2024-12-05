@@ -110,10 +110,7 @@ input[type="submit"]:hover {
 }
 
 /* Validaciones de input */
-input:required:valid {
-    border-color: #008000;
-}
-input:focus:invalid {
+input:invalid, textarea:invalid, select:invalid {
     border-color: #ff0000;
 }
 

@@ -11,7 +11,21 @@ const DOM = {
     username: document.getElementById("userdata_username"),
     hobbiesInput: document.getElementById("hobbies"),
     hobbiesList: document.querySelectorAll(".aficiones input[type=checkbox]"),
+    birthyearSelect: document.getElementById("personaldata_birthyear"),
+    postalCode: document.getElementById("personaldata_cp"),
 
+}
+// (function(){
+// });
+
+// Generar las opciones para el año de nacimiento
+const startYear = 1920;
+const endYear = 2010;
+for (let year = startYear; year <= endYear; year++) {
+    let option = document.createElement('option');
+    option.value = year;
+    option.textContent = year;
+    DOM.birthyearSelect.appendChild(option);
 }
 
 // Mostrar contraseña
@@ -23,6 +37,16 @@ DOM.showPassword.addEventListener("change", () => {
 DOM.selectDNINIE.addEventListener("change", () => {
     DOM.inputDNINIE.disabled = DOM.selectDNINIE.value ? false : true;
 });
+
+// Deshabilitar uso de lo que no sea número en el input de Código Postal
+DOM.postalCode.addEventListener("keydown", (e) => {
+    if (/^[a-zA-Z\s]$/.test(e.key)) {
+        e.preventDefault();
+    }
+});
+
+
+
 
 // Contar caracteres de título
 DOM.title.addEventListener("input", (e) => {
@@ -73,3 +97,4 @@ DOM.form.addEventListener("submit", (e) => {
     DOM.hobbiesInput.value = hobbies.length >= 2 ? hobbies.toString() : null;
     console.log(DOM.hobbiesInput.value);
 })
+
