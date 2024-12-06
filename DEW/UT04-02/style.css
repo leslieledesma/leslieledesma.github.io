@@ -141,6 +141,15 @@ a:hover {
     color: #3e6291;
 }
 
+#errores {
+    padding-top: 10em;
+    span {
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0.5em;
+        color: #F00;
+    }
+}
 
 @media screen and (min-width: 900px) {
     form fieldset.userdata {
@@ -177,6 +186,9 @@ a:hover {
                 display: flex;
                 flex-direction: row;
                 gap: 0.5em;
+                span {
+                    margin-top: 0.5em;
+                }
             }
         }
         .personaldata-div_hobbies {
@@ -186,6 +198,10 @@ a:hover {
                 gap: 1em;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+                span {
+                    margin-top: 0.3em;
+                    grid-column: span 3;
+                }
             }
         }
     }
