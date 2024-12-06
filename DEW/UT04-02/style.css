@@ -1,5 +1,5 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     display: grid;
@@ -9,25 +9,26 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 2em;
+    margin-top: 1em;
+    font-size: 2em;
 }
 
 form {
-    margin: 2.5em auto;
+    margin: 1em auto;
     max-width: 56.25em;
-    padding: 2em;
+    padding: 1em;
 }
 
 fieldset {
-    margin-bottom: 3em;
-    padding: 3em;
-    border-radius: 2em;
+    border: none;
+    margin-bottom: 2em;
 }
 
 legend {
     font-size: 1.5em;
-    font-weight: bold;
-    padding: 0 0.5em;
+    border-bottom: 0.1em solid #000;
+    width: 100%;
+    margin-bottom: 0.5em;
 }
 
 input[type="text"],
@@ -37,26 +38,27 @@ input[type="password"],
 select,
 textarea {
     width: 100%;
-    padding: 0.75em;
+    padding: 0.6em;
     border: 0.0625em solid #ccc;
     border-radius: 0.5em;
-    margin-bottom: 1.25em;
     margin-top: 0.3em;
     box-sizing: border-box;
+    margin-bottom: 1.25em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {    
+    cursor: pointer;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
 }
 
 textarea {
     resize: none;
     height: 7.5em;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    vertical-align: middle;
-}
-
-input:focus, textarea:focus, select:focus {
-    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 fieldset label[for="userdata_showpassword"],
@@ -95,23 +97,34 @@ fieldset label[for="lectura"] {
 /* Botón enviar */
 input[type="submit"] {
     background-color: #007bff;
-    color: #ffffff;
+    color: #fff;
     padding: 1em;
     font-size: 1.1em;
-    border: none;
     border-radius: 0.5em;
-    cursor: pointer;
     width: 100%;
     transition: background-color 0.3s;
     box-sizing: border-box;
+    border: none;
+    cursor: pointer;
 }
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Validaciones de input */
-input:invalid, textarea:invalid, select:invalid {
-    border-color: #ff0000;
+/* Validaciones */
+/* input:invalid, textarea:invalid, select:invalid {
+    border-color: #F00;
+} */
+.errormessage {
+    margin: -1em 0 1.2em;
+    display: block;
+    font-size: 0.8em;
+    right: 0.625em;
+    bottom: 0;
+    color: #F00;
+}
+form.submitted *:invalid:not(fieldset){
+    border-color: #F00;
 }
 
 /* Volver a la página de inicio */
@@ -128,16 +141,6 @@ a:hover {
     color: #3e6291;
 }
 
-.errormessage {
-    margin: -1em 0 1.2em;
-    display: block;
-    font-size: 0.8em;
-    color: #ff0000;
-    right: 0.625em;
-    bottom: 0;
-    border-color: #ff0000;
-}
-
 
 @media screen and (min-width: 900px) {
     form fieldset.userdata {
@@ -151,6 +154,7 @@ a:hover {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1em;
+            margin-bottom: 1em;
             div {
                 display: flex;
                 flex-direction: column;
@@ -160,21 +164,29 @@ a:hover {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1em;
+            margin-bottom: 1em;
+            div.field-doc {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 0.5em;
+                span {
+                    grid-column: span 2;
+                }
+            }
             div.field-group {
                 display: flex;
                 flex-direction: row;
-                gap: 1em;
+                gap: 0.5em;
             }
         }
         .personaldata-div_hobbies {
-            div {
-                justify-content: left;
+            margin-bottom: 1em;
+            div.aficiones {
+                margin-top: 1em;
                 gap: 1em;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                flex-direction: column;
             }
         }
- 
     }
 }

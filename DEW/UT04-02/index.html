@@ -17,11 +17,13 @@
                 <div>
                     <label for="userdata_username">Nombre de usuario</label>
                     <input minlength="4" maxlength="20" type="text" name="NombreUsuario" id="userdata_username" placeholder="Nombre de usuario" required>
+                    <span id="userdata-error_username"></span>
                 </div>
                 <div>
                     <div>
                         <label for="userdata_password">Contraseña</label>
-                        <input type="password" name="Contrasena" id="userdata_password" placeholder="Contraseña" required>
+                        <input pattern="^\d{8}$" maxlength="8" type="password" name="Contrasena" id="userdata_password" placeholder="Contraseña" required>
+                        <span id="userdata-error_password"></span>
                     </div>
                     <div>
                         <input type="checkbox" name="showpassword" id="userdata_showpassword">
@@ -36,29 +38,36 @@
                     <div>
                         <label for="personaldata_name">Nombre</label>
                         <input minlength="4" maxlength="20" type="text" name="Nombre" id="personaldata_name" placeholder="Nombre" required>
+                        <span id="personaldata-error_name"></span>
                     </div>
                     <div>
                         <label for="personaldata_surname">Apellidos</label>
                         <input minlength="4" maxlength="20" type="text" name="Apellidos" id="personaldata_surname" placeholder="Apellidos" required>
+                        <span id="personaldata-error_surname"></span>
                     </div>
                     <div>
                         <label for="personaldata_telephone">Teléfono</label>
                         <input type="tel" name="Telefono" id="personaldata_telephone" placeholder="Ej: (+34)922123123" pattern="\(\+\d{2}\)\d{9}" required>
+                        <span id="personaldata-error_telephone"></span>
                     </div>
                     <div>
                         <label for="personaldata_cp">Código Postal</label>
                         <input minlength="5" maxlength="5" type="text" name="CodigoPostal" id="personaldata_cp" placeholder="38XXX" pattern="^38\d{3}$" required>
+                        <span id="personaldata-error_cp"></span>
                     </div>
                 </div>
                 <div class="personaldata-div_doctype">
                     <div>
                         <label for="personaldata-select_dninie">DNI/NIE</label>
-                        <select name="TipoDocumento" id="personaldata-select_dninie" required>
-                            <option value="" disabled selected>---</option>
-                            <option value="DNI">DNI</option>
-                            <option value="NIE">NIE</option>
-                        </select>
-                        <input name="DniNie" type="text" placeholder="DNI / NIE" id="personaldata-input_dninie" disabled required>         
+                        <div class="field-doc">
+                            <select name="TipoDocumento" id="personaldata-select_dninie" required>
+                                <option value="" disabled selected>---</option>
+                                <option value="DNI">DNI</option>
+                                <option value="NIE">NIE</option>
+                            </select>
+                            <input pattern="([XYZxyz]\d{7}|[0-9]{8})[A-Za-z]" name="DniNie" type="text" placeholder="DNI / NIE" id="personaldata-input_dninie" disabled required>         
+                            <span id="personaldata-error_doctype"></span>
+                        </div>
                     </div>
                     <div>
                         <span>Crear cuenta como:</span>
@@ -71,6 +80,7 @@
                                 <input type="radio" name="CuentaComo" value="empresa" id="accounttype_empresa" required>
                                 <label for="accounttype_empresa">Empresa</label>
                             </div>
+                            <span id="personaldata-error_accounttype"></span>
                         </div>
                     </div>
                     <div>
@@ -78,11 +88,12 @@
                         <select name="AnioNacimiento" id="personaldata_birthyear" required>
                             <option value="" disabled selected>Selecciona un año</option>
                         </select>
+                        <span id="personaldata-error_birthyear"></span>
                     </div>
                 </div>
                 <div class="personaldata-div_hobbies">
                     <span>Elige tus aficiones:</span>            
-                    <div class="field-group aficiones">
+                    <div class="aficiones">
                         <div>
                             <input type="checkbox" value="MU" id="musica">
                             <label for="musica">Música</label>
@@ -107,7 +118,8 @@
                             <input type="checkbox" value="LE" id="lectura">
                             <label for="lectura">Lectura</label>
                         </div>
-                        <input type="text" id="hobbies" name="aficiones" hidden required>
+                        <input type="text" id="hobbies" name="Aficiones" hidden required>
+                        <span id="personaldata-error_hobbies"></span>
                     </div>
                 </div>
                 
@@ -118,11 +130,13 @@
                 <div class="postdata-container">
                     <label for="postdata_title">Título</label>
                     <input minlength="4" maxlength="15" type="text" name="PublicacionTitulo" maxlength="15" id="postdata_title" placeholder="Título" required>
+                    <span id="postdata-error_title"></span>
                     <span id="postdata-count_title">0/15</span>
                 </div>
                 <div class="postdata-container">
                     <label for="postdata_description">Descripción</label>
-                    <textarea minlength="4" maxlength="120" name="PublicacionDescripcion" id="postdata_description" required></textarea>
+                    <textarea placeholder="Descripción de la publicación" minlength="4" maxlength="120" name="PublicacionDescripcion" id="postdata_description" required></textarea>
+                    <span id="postdata-error_description"></span>
                     <span id="postdata-count_description">0/120</span>
                 </div>
             </fieldset>
