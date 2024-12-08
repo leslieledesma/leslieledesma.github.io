@@ -112,7 +112,7 @@ header {
                 figure {
                     width: 6em;
                     height: 100%;
-                    background-image: url("/images/Logo_Rollermagic.png");
+                    background-image: url("../images/Logo_Rollermagic.png");
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -240,7 +240,7 @@ main {
         }
     
         .latest {
-            background-image: url("/images/ambroise-nicolao-QWzdZix8WKk-unsplash.jpg");
+            background-image: url("../images/ambroise-nicolao-QWzdZix8WKk-unsplash.jpg");
             background-size: cover;
             background-position: top;
             background-repeat: no-repeat;
@@ -299,15 +299,15 @@ main {
                 }
         
                 div.collection:first-child {
-                    background-image: url("/images/rameez-remy-ZkKf5J6OJUU-unsplash.jpg");
+                    background-image: url("../images/rameez-remy-ZkKf5J6OJUU-unsplash.jpg");
                 }
         
                 div.collection:nth-child(2) {
-                    background-image: url("/images/chris-benson-lVhdxF2spAk-unsplash.jpg");
+                    background-image: url("../images/chris-benson-lVhdxF2spAk-unsplash.jpg");
                 }
         
                 div.collection:last-child {
-                    background-image: url("/images/logan-weaver-lgnwvr-FvxU8FboUdE-unsplash.jpg");
+                    background-image: url("../images/logan-weaver-lgnwvr-FvxU8FboUdE-unsplash.jpg");
                 }
             }
         }
