@@ -3,126 +3,152 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AE2.1</title>
-        
-        <!-- Fuentes de API -->
+        <meta name="description" content="Página principal de la tienda de patines Roller Magic">
+        <title>Roller Magic - Home</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
-        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
-    <body class="">
+    <body>
         <header>
             <!-- Logotipo y nombre de la empresa. Enlaces de contacto y gestión de perfil de usuario. -->
-            <div class="logo">
-                <figure></figure>
-                <span>Roller Magic</span>
+            <div  aria-label="Menú de accesibilidad" class="accesibility-menu">
+                <button aria-label="Cambiar modo de iluminación" id="mode"><i class="fa-solid" title="Cambiar modo"></i></button>
+                <button aria-label="Disminuir tamaño de la fuente" id="fontSizeDown" title="Disminuir tamaño fuente">A-</button>
+                <button aria-label="Restablecer tamaño de la fuente" id="fontSizeDefault" title="Restablecer tamaño fuente">A</button>
+                <button aria-label="Aumentar tamaño de la fuente" id="fontSizeUp" title="Aumentar tamaño fuente">A+</button>
             </div>
-            <div class="user-management">
-                <a href="#" title="Contacto"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" title="Perfil"><i class="fa-solid fa-user"></i></a>
-                <a href="#" title="Favoritos"><i class="fa-solid fa-star"></i></a>
-                <a href="#" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-            <div class="accesibility-menu">
-                <button onclick="changeMode()" id="mode"><i class="fa-solid" title="Cambiar modo"></i></button>
-                <input type="checkbox" id="contrast-input">
-                <label class="contrast-label" for="contrast-input" title="Alto contraste"><i class="fa-solid fa-circle-half-stroke"></i></label>
+            <div class="header">
+                <div class="logo">
+                    <a href="./index.html">
+                        <figure></figure>
+                        <span>Roller Magic</span>
+                    </a>
+                </div>
+                <div aria-label="Menú de gestión de usuario" class="user-management">
+                    <a aria-label="Contacto" href="#" title="Contacto"><i class="fa-solid fa-envelope"></i></a>
+                    <a aria-label="Perfil" href="#" title="Perfil"><i class="fa-solid fa-user"></i></a>
+                    <a aria-label="Favoritos" href="#" title="Favoritos"><i class="fa-solid fa-star"></i></a>
+                    <a aria-label="Carrito" href="#" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
             </div>
         </header>
         <nav>
             <!-- Departamentos o servicios -->
-            <a href="#">Patinaje 4 ruedas</a>
-            <a href="#">Patinaje en línea</a>
-            <a href="#">Patinaje sobre hielo</a>
-            <a href="#">Patinaje artístico</a>
-            <a href="#">Accesorios</a>
+            <a href="./pages/catalog/catalog.html">Patinaje 4 ruedas</a>
+            <a href="./pages/catalog/catalog.html">Patinaje en línea</a>
+            <a href="./pages/catalog/catalog.html">Patinaje sobre hielo</a>
+            <a href="./pages/catalog/catalog.html">Patinaje artístico</a>
+            <a href="./pages/catalog/catalog.html">Accesorios</a>
         </nav>
         <aside>
             <!-- Categorías más visitadas o promociones -->
             <ul>
-                <li><a href="#">Popular &#128293 </a></li>
-                <li><a href="#">Packs iniciación</a></li>
-                <li><a href="#">Colecciones</a></li>
-                <li><a href="#">Colaboraciones</a></li>
-                <li><a href="#">Tarjetas regalo</a></li>
-                <li><a href="#">Segunda mano</a></li>
-                <li><a href="#">Rebajas</a></li>
+                <li><a href="./pages/catalog/catalog.html">Popular &#128293; </a></li>
+                <li><a href="./pages/catalog/catalog.html">Packs iniciación</a></li>
+                <li><a href="./pages/catalog/catalog.html">Colecciones</a></li>
+                <li><a href="./pages/catalog/catalog.html">Colaboraciones</a></li>
+                <li><a href="./pages/catalog/catalog.html">Tarjetas regalo</a></li>
+                <li><a href="./pages/catalog/catalog.html">Segunda mano</a></li>
+                <li><a href="./pages/catalog/catalog.html">Rebajas</a></li>
             </ul>
         </aside>
-        <main> 
-            <!-- Producto -->
-            <section>
-                <article class="product">
-                    <figure>
-                        <img src="./images/sindy-sussengut-JlLhBYbolSU-unsplash.jpg" alt="">
-                    </figure>
-                    <div class="product-main">
-                        <div class="product-info">
-                            <h1>Lorem ipsum</h1>
-                            <p class="product-info_description">Lorem ipsum dolor sit.</p>
-                            <p class="product-info_price">115.50 €</p>
+        <main class="main-page"> 
+            <!-- Mínimo 4 secciones. -->
+            <section class="latest">
+                <div>
+                    <h1>Recién llegados</h1>
+                    <span>Street InLine</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit aliquid dolore veritatis.</p>
+                    <a href="#" class="btn">Comprar ahora</a>
+                </div>
+            </section>
+            <section class="collections">
+                <h1>Nuevas Colecciones</h1>
+                <div class="container">
+                    <div class="collection">
+                        <div class="collection-text">
+                            <span>Fitness</span>
+                            <p>Lorem, ipsum dolor.</p>
+                            <a href="#" class="btn">Ver</a>
                         </div>
-                        <div class="set-favorite">
-                            <a href="#." onclick="setFavorite()"><i id="set-favorite_icon" class="fa-regular fa-star"></i></a>
-                        </div>
-                        <div class="product-option">
-                            <label for="product-color">Color</label>
-                            <select name="color" id="product-color">
-                                <option value="" disabled selected>Selecciona el color</option>
-                                <option value="Blanco">Blanco</option>
-                                <option value="Negro">Negro</option>
-                                <option value="Rosa">Rosa</option>
-                                <option value="Verde">Verde</option>
-                                <option value="Azul">Azul</option>
-                            </select>
-                        </div>
-                        <div class="product-option">
-                            <label for="product-size">Talla</label>
-                            <select name="size" id="product-size">
-                                <option value="" disabled selected>Selecciona la talla</option>
-                                <option value="35">35</option>
-                                <option value="36">36</option>
-                                <option value="37">37</option>
-                                <option value="38">38</option>
-                                <option value="39">39</option>
-                                <option value="40">40</option>
-                                <option value="42">42</option>
-                            </select>
-                        </div>
-                        <a href="#" class="btn" id="buy">Añadir a la cesta</a>
                     </div>
-                </article>
-                <article class="product-details">
-                    <h1>Detalles</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos provident cum exercitationem quia, vel, ducimus, id veritatis sunt autem ut repudiandae consequuntur ab sed quasi neque ipsa eveniet officiis saepe commodi soluta ullam laboriosam! Neque, enim sed. Provident ut maxime aperiam omnis, ex reprehenderit cumque repudiandae facilis, autem, odit quas.</p>
-                </article>
-                <article class="product-features">
-                    <h1>Características</h1>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                        <li>Veniam quaerat minima est.</li>
-                        <li>Sequi, quibusdam eos!</li>
-                        <li>Assumenda, provident. Perferendis.</li>
-                        <li>Molestias, eveniet autem!</li>
-                        <li>Illum quod laborum tempore. At fugit possimus dolorum?</li>
-                    </ul>
-                </article>
-                <article class="product-advice">
-                    <h1>Mantenimiento y cuidados</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit incidunt ad nihil natus praesentium expedita? Reiciendis quidem ipsam culpa hic perferendis, ad laborum aspernatur consequatur doloribus! Obcaecati consectetur, molestias tempore officiis cum eaque quod tenetur deserunt recusandae laudantium aspernatur in ducimus necessitatibus error! Sapiente alias error autem magnam iusto consequuntur inventore aliquam fugit. Perspiciatis ullam blanditiis voluptatem unde dolore eum tempora accusantium veniam sunt quisquam!</p>
-                    <ul>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                        <li>Atque ab aliquid veniam. Doloremque, ipsa!</li>
-                        <li>Ullam earum dignissimos ducimus adipisci perferendis?</li>
-                        <li>Ratione, harum est asperiores obcaecati dolorum neque dolorem!</li>
-                        <li>Commodi et beatae voluptate ipsum.</li>
-                        <li>Impedit tempora minima architecto earum dolorem.</li>
-                    </ul>
-                </article>
+                    <div class="collection">
+                        <div class="collection-text">
+                            <span>Derby</span>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <a href="#" class="btn">Ver</a>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <div class="collection-text">
+                            <span>Park</span>
+                            <p>Lorem ipsum dolor sit.</p>
+                            <a href="#" class="btn">Ver</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="featured">
+                <figure>
+                    <img src="images/sindy-sussengut-JlLhBYbolSU-unsplash.jpg" alt="">
+                </figure>
+                <div>
+                    <h1>Lo mejor en quads</h1>
+                    <span>Urban Line Quads</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <a href="#" class="btn">Ver aquí</a>
+                </div>
+            </section>
+            <section class="popular">
+                <h1>Productos Populares</h1>
+                <div>
+                    <article>
+                        <img src="images/zoe-warmerdam-UC6ARRpzk6s-unsplash2.jpg" alt="">
+                        <h2 class="product-title">Ipsum dolor</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <span>115.50 €</span>
+                        <a href="./pages/product/product.html" class="btn">Detalles</a>
+                    </article>
+                    <article>
+                        <img src="images/matthew-ball-m8sHineRr5E-unsplash.jpg" alt="">
+                        <h2 class="product-title">Reprehenderit</h2>
+                        <p>Eligendi est repellat quia voluptas officia facere libero!</p>
+                        <span>55.59 €</span>
+                        <a href="./pages/product/product.html" class="btn">Detalles</a>
+                    </article>
+                    <article>
+                        <img src="images/luke-southern-hyvIttJtKPI-unsplash.jpg" alt="">
+                        <h2 class="product-title">Facilis officiis</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <span>59.99€</span>
+                        <a href="./pages/product/product.html" class="btn">Detalles</a>
+                    </article>
+                    <article>
+                        <img src="images/ambroise-nicolao-ze6Z79rHdUk-unsplash.jpg" alt="">
+                        <h2 class="product-title">Explicabo placeat</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <span>103.47 €</span>
+                        <a href="./pages/product/product.html" class="btn">Detalles</a>
+                    </article>
+                    <article>
+                        <img src="images/susan-weber-9RuN5pzalr4-unsplash2.jpg" alt="">
+                        <h2 class="product-title">Consectetur</h2>
+                        <p>Incidunt ea ex adipisci non dicta at magni dolorem maiores.</p>
+                        <span>119.99 €</span>
+                        <a href="./pages/product/product.html" class="btn">Detalles</a>
+                    </article>
+                    <article>
+                        <img src="images/rachel-moore-W5_LFlMSI7w-unsplash.jpg" alt="">
+                        <h2 class="product-title">Lorem ipsum</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <span>249.99 €</span>
+                        <a href="./pages/product/product.html" class="btn">Detalles</a>
+                    </article>
+                </div>
             </section>
         </main>
         <footer>

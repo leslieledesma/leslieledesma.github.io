@@ -1,0 +1,89 @@
+main.catalog-page {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    color: var(--text-color);
+    background-color: var(--bckgr-color);
+        
+    section {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            text-align: center;
+            padding: 0.5em 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            article {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 0.7em;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                
+                h2 {
+                    text-transform: uppercase;
+                    margin: 0.2em;
+                    font-size: 1.2em;
+                }
+        
+                p {
+                    margin: 0.2em;
+                    font-weight: bold;
+                }
+                
+                img {
+                    width: 100%;
+                    border-radius: 2em;
+                    object-fit: cover;
+                }
+
+                a {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Color de las estrellas del rating */
+.rating {
+    color: orange;
+}
+
+/* Disposición para pantallas de entre 576 y 911 px de ancho en formato portrait */
+@media screen and (min-width:576px) {
+    main.catalog-page {
+        section div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* Disposición para pantallas de entre 912 y 1023 px de ancho
+o para pantallas de entre 576 y 1023 px en formato landscape */
+@media screen and (min-width: 912px), (min-width: 576px) and (orientation: landscape) {
+    main.catalog-page section div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Disposición para pantallas de más de 1023 px de ancho */
+@media screen and (min-width:1024px) {
+    main.catalog-page {
+        section div {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}

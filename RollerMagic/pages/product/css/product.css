@@ -1,0 +1,116 @@
+main.product-page {
+    display: flex;
+    color: var(--text-color);
+    background-color: var(--bckgr-color);
+    text-align: start;
+
+    section {
+        height: auto;
+        display: grid;
+        padding: 2em;
+
+        div {
+            margin-bottom: 1em;
+            
+            p, li {
+                font-size: 0.9em;
+            }
+
+            h1 {
+                padding: 0.5em 0;
+            }
+        }
+
+        div.product {
+            display: grid;
+            justify-self: center;
+            font-size: 1.2em;
+            
+            figure {
+                img {
+                    width: 100%;
+                    border-radius: 2em;
+                    object-fit: cover;
+                }
+            }
+            
+            div.product-main {
+                display: grid;
+                margin: 1em;
+                
+                div.product-info {
+                    text-align: start;
+                    margin-bottom: 1.2em;
+    
+                    p.product-info_description {
+                        font-size: 0.9em;
+                        margin: 0.5em 0;
+                    }
+                    
+                    p.product-info_price {
+                        font-weight: bold;
+                    }
+                }
+    
+                div.set-favorite {
+                    text-align: end;
+                }
+    
+                div.product-option {
+                    display: grid;
+                    grid-column: 1 / span 2;
+                    margin-bottom: 0.8em;
+                    
+                    label {
+                        font-size: 0.8em;
+                        margin-bottom: 0.2em;
+                        text-transform: uppercase;
+                    }
+                    
+                    select {
+                        display: block;
+                        padding: 0.5em;
+                    }
+                }
+    
+                a#buy {
+                    grid-column: 1 / span 2;
+                    height: max-content;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 0.8em;
+                    background-color: var(--button-color);
+                    color: var(--border-color);
+                    margin: 1em 0 0 0;
+                    width: 100%;
+                }
+                a#buy:hover {
+                    background-color: var(--button-hover-color);
+                    color: var(--bckgr-color);
+                }
+            }     
+        }
+    }
+}
+
+/* Color de la estrella */
+#set-favorite_icon {
+    font-size: 1em;
+    color: #FFD500;
+}
+
+@media screen and (min-width:1024px) {
+    main.product-page {     
+        section div.product {
+            grid-template-columns: 3fr 2fr;
+            align-items: center;
+            max-width: 70vw;
+            
+            div.product-main {
+                margin-left: 2.5em;
+                display: grid;
+                grid-template-rows: auto auto auto 1fr;
+            }
+        }
+    }
+}
